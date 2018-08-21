@@ -9,11 +9,10 @@ const INITIAL_STATE = {
     todoToDelete: null,
     showEditModal: false,
     todoToEdit: null,
-}
-  
-export  const todoReducer = (currentState = INITIAL_STATE, action) => {
+  }
+  export  const todoReducer = (currentState = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'FETCH_TODOS_REQUEST':
+      case 'FETCH_TODOS_REQUEST':
             return {
               ...currentState,
               todos:[],
@@ -26,7 +25,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        case 'FETCH_TODOS_SUCCESS':
+  case 'FETCH_TODOS_SUCCESS':
             return {
               ...currentState,
               todos:action.todos,
@@ -39,7 +38,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        case 'FETCH_TODOS_FAILED':
+  case 'FETCH_TODOS_FAILED':
             return {
               ...currentState,
               todos:[],
@@ -52,7 +51,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        case 'FETCH_TODO_REQUEST':
+  case 'FETCH_TODO_REQUEST':
             return {
               ...currentState,
               todos:currentState.todos,
@@ -65,7 +64,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        case 'FETCH_TODO_SUCCESS':
+  case 'FETCH_TODO_SUCCESS':
             return {
               ...currentState,
               todos:currentState.todos,
@@ -78,7 +77,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        case 'FETCH_TODO_FAILED':
+  case 'FETCH_TODO_FAILED':
             return {
               ...currentState,
               todos:[],
@@ -91,7 +90,7 @@ export  const todoReducer = (currentState = INITIAL_STATE, action) => {
               showEditModal: false,
               todoToEdit: null,
             }
-        default:
-            return currentState;
-    }
-}
+  default:
+         return currentState;
+  }
+  }

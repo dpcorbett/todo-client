@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 export default class Todos extends React.Component {
   constructor(props){
     super(props);
+    console.log(this.props);
   }
 componentWillMount(){
     this.props.fetchTodos();

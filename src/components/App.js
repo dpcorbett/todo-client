@@ -2,19 +2,21 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import './App.css';
+
+//import './App.css';
+
 export default class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.toggleAddTodo = this.toggleAddTodo.bind(this);
-  }
-toggleAddTodo(e){
-    e.preventDefault();
-     this.props.mappedToggleAddTodo();
-  }
-render(){
-    return(
-      <div>
+    constructor(props){
+        super(props);
+        this.toggleAddTodo = this.toggleAddTodo.bind(this);
+    }
+    toggleAddTodo(e){
+        e.preventDefault();
+        this.props.mappedToggleAddTodo();
+    }
+    render(){
+        return(
+    <div>
       <Navbar inverse  collapseOnSelect className="customNav">
     <Navbar.Header>
       <Navbar.Brand>

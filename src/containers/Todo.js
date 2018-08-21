@@ -5,7 +5,7 @@ import Todo from '../components/Todo';
 // map state from store to props
 const mapStateToProps = (state) => {
   return {
-    //you can now say this.props.mappedAppState
+    //you can now say this.props.mappedAppSate
     mappedTodoState: state.todoState
   }
 }
